@@ -28,7 +28,6 @@ def tree_point(TREE_ANGLE, TREE_SEGMENTS):
     right_bottom_point = (
         math.sin(math.radians(TREE_ANGLE/2))*TREE_SIDE_LEN*GUI_UNIT, 
         math.cos(math.radians(TREE_ANGLE/2))*TREE_SIDE_LEN*GUI_UNIT)
-    #top_point = TREE_INITIAL_POINT
     left_i_points = ()
     right_i_points = ()
     for i in range(1,TREE_SEGMENTS):
@@ -42,10 +41,7 @@ def tree_point(TREE_ANGLE, TREE_SEGMENTS):
     i_points = ()
     for i in range(TREE_SEGMENTS-1):
         i_points += (right_i_points[2*i], right_i_points[2*i+1])
-        #i_points += right_i_points[2*i+1]
         i_points += (left_i_points[2*i], left_i_points[2*i+1])
-        #i_points += left_i_points[2*i+1]
-    #return top_point, right_bottom_point, left_bottom_point, top_point
     i_points += (
         TREE_INITIAL_POINT[0] + math.sin(math.radians(TREE_ANGLE/2))*TREE_SIDE_LEN*GUI_UNIT, 
         TREE_INITIAL_POINT[1]+math.cos(math.radians(TREE_ANGLE/2))*TREE_SIDE_LEN*GUI_UNIT)
@@ -144,21 +140,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-
-
-
-(329.1171425740336, 128.6666554575202, 
-212.64857227789923, 345.9999663725606, 
-358.23428514806716, 237.33331091504039, 
-241.76571485193284, 237.33331091504039, 
-387.35142772210077, 345.9999663725606, 
-270.8828574259664, 128.6666554575202, 
-300, 20)
-
-
-
-
-
-
