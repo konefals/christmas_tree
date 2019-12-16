@@ -7,8 +7,6 @@ from tkinter.ttk import Combobox
 from tkinter import Tk, Canvas, Frame, BOTH
 
 TREE_SIDE_LEN = 1.5
-#TREE_ANGLE = 50
-#TREE_SEGMENTS = 10
 GUI_UNIT = 400
 TREE_INITIAL_POINT = (400, 20)
 
